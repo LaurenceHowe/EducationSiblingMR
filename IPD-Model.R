@@ -11,7 +11,7 @@ require(survival)
 require(nlWaldTest)
 require(msm)
 
-#Assumes dataset called "analysis" containing data on IID, FID, phenotypes, covariates and PGS.
+#Assumes dataset called "analysis" containing data on IID, FID, phenotypes, covariates and PGS with phenotypes already standardised on covariates if necessary.
 
 #Generate the mean sibship value for measured educational attainment and the educational attainment PGS
 analysis$FAM_MEAN <- ave(analysis$Education_std, analysis$FID)
